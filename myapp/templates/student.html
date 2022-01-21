@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>form page</title>
+<script>
+	function validateForm() {
+		let x = document.forms["myform"]["rollno"].value;
+		let y = document.forms["myform"]["name"].value;
+		if (x == "") {
+		  alert("ROLLNO must be filled out");
+		  return false;
+		}
+		else if (x.length<3) {
+			alert("length must be greater than 3");
+			return false;
+		  }
+		else if (y == "") {
+			alert("ROLLNO must be filled out");
+			return false;
+		  }
+	  }
+</script>
+</head>
+<body>
+	
+      <form   name="myform" action="indata" onsubmit="return validateForm()">
+      	<fieldset>
+      		<legend ><h3>STUDENT FORM</h3></legend>
+      	Enter rollno:-<input type="text" name="rollno" ><br><br>
+      	Enter name:-<input type="text" name="name"><br><br>
+      	Enter class:- <select name="clas">
+      		<option>MSc</option>
+      		<option>BSc</option>
+      		<option>MBA</option>
+			<option>BBA</option>
+      		<option>BCA</option>
+      		<option>B.TECH</option>
+      	</select><br><br>
+		  Enter mobile no:-<input type="text" name="mob"><br><br>
+		  Enter address:- <textarea type="text" name="address"></textarea><br><br>
+      	<input type="submit" name="btn" value="SAVE RECORD">
+      
+      	</fieldset>
+      </form>
+</body>
+</html>
